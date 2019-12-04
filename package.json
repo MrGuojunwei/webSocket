@@ -1,0 +1,35 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "websocketDemo",
+  "main": "client/src/main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrGuojunwei/webSocket.git"
+  },
+  "author": "郭军伟",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrGuojunwei/webSocket/issues"
+  },
+  "homepage": "https://github.com/MrGuojunwei/webSocket#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^3.2.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}

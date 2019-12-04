@@ -1,0 +1,50 @@
+html,
+body {
+    padding: 0;
+    margin : 0;
+}
+
+html,
+body {
+    width           : 100%;
+    height          : 100%;
+    background-color: #eee;
+}
+
+.login-title {
+    width      : 100%;
+    font-size  : 24px;
+    line-height: 2em;
+    margin     : 30px auto;
+    color      : #333;
+    text-align : center;
+}
+
+.form-wrap {
+    margin-top: 20px;
+}
+
+.login-username,
+.login-password {
+    width           : 70%;
+    height          : 40px;
+    line-height     : 40px;
+    font-size       : 18px;
+    padding-left    : 15px;
+    background-color: #fff;
+    color           : #000;
+    margin          : 20px auto 0;
+    display         : block;
+}
+
+.login-btn {
+    width           : 70%;
+    height          : 40px;
+    line-height     : 40px;
+    font-size       : 16px;
+    background-color: green;
+    color           : #fff;
+    text-align      : center;
+    margin          : 20px auto 0;
+    display         : block;
+}
