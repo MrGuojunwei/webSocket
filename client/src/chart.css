@@ -136,6 +136,7 @@ body {
 
 .user-wrap {
     display: flex;
+    margin: 4px 0;
 }
 
 .head-img {

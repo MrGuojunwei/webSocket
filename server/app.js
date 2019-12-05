@@ -35,4 +35,10 @@ io.on('connection', function (socket) {
         // 向所有连接的客户广播add事件
         socket.emit('add', data)
     })
+
+
+    socket.on('message', function (data) {
+        // 接收到消息后，将消息广播出去
+        socket.emit('receiveMessage', data)
+    })
 })
