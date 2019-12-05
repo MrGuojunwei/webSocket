@@ -11,6 +11,15 @@ body {
     background-color: #eee;
 }
 
+.login {
+    position: fixed;
+    left    : 0;
+    right   : 0;
+    top     : 0;
+    bottom  : 0;
+    display : block;
+}
+
 .login-title {
     width      : 100%;
     font-size  : 24px;
@@ -35,6 +44,7 @@ body {
     color           : #000;
     margin          : 20px auto 0;
     display         : block;
+    border          : none;
 }
 
 .login-btn {
@@ -47,4 +57,133 @@ body {
     text-align      : center;
     margin          : 20px auto 0;
     display         : block;
+    border          : none;
+}
+
+/* 聊天室 */
+.chartRoom {
+    position: fixed;
+    left    : 0;
+    right   : 0;
+    top     : 0;
+    bottom  : 0;
+    display : none;
+}
+
+.chart-title {
+    height          : 50px;
+    line-height     : 50px;
+    font-size       : 20px;
+    background-color: #000;
+    color           : #fff;
+    font-weight     : bold;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    text-align      : center;
+}
+
+.chart-input-wrap {
+    position: fixed;
+    bottom  : 0;
+    height  : 40px;
+    left    : 0;
+    right   : 0;
+    display : flex;
+}
+
+.send-input {
+    height      : 100%;
+    flex        : 1;
+    border      : none;
+    padding-left: 16px;
+}
+
+.send-btn {
+    height          : 100%;
+    width           : 80px;
+    line-height     : 40px;
+    text-align      : center;
+    background-color: green;
+    color           : #fff;
+    font-size       : 16px;
+    border          : none;
+}
+
+.chart-content {
+    position     : fixed;
+    left         : 0;
+    right        : 0;
+    top          : 53px;
+    bottom       : 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+.add-wrap {
+    text-align: center;
+}
+
+.chart-add {
+    display         : inline-block;
+    margin          : 6px auto;
+    background-color: #aaa;
+    color           : #fff;
+    font-size       : 14px;
+    border-radius   : 4px;
+    padding         : 6px;
+}
+
+.user-wrap {
+    display: flex;
+}
+
+.head-img {
+    width        : 40px;
+    height       : 40px;
+    border-radius: 4px;
+}
+
+.username {
+    font-size: 14px;
+    color    : #222;
+}
+
+.message-content {
+    background-color: #fff;
+    font-size       : 14px;
+    line-height     : 1.5;
+    padding         : 4px 8px;
+    border-radius   : 6px;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.left0 {
+    display        : flex;
+    justify-content: flex-start;
+
+}
+
+.marginLeft8 {
+    margin-left: 8px;
+}
+
+.right0 {
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.marginRight8 {
+    margin-right: 8px;
+}
+
+.self {
+    background-color: rgb(84, 192, 70) !important;
 }

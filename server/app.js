@@ -10,12 +10,29 @@ const socketIo = require('socket.io');
 const app = http.createServer();
 const io = socketIo(app);
 
-app.listen(3001, () =>{
+const users = [ // 用户数组
+
+]
+
+app.listen(3001, () => {
     console.log('监听端口：3001');
 });
 
 io.on('connection', function (socket) {
-    socket.emit('login', function (data) {
-        console.log(data);
+    socket.on('login', function (data) {
+        let isNew;
+        let index = users.findIndex(item => item.username === data.username);
+        isNew = index < 0 ? true : false;
+
+        if (isNew) {
+            /*登录成功*/
+            users.push(data);
+            socket.emit('loginSuccess', data);
+        } else {
+            socket.emit('loginFail', '用户名已存在')
+        }
+
+        // 向所有连接的客户广播add事件
+        socket.emit('add', data)
     })
 })
