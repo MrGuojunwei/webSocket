@@ -10,22 +10,25 @@ const socketIo = require('socket.io');
 const app = http.createServer();
 const io = socketIo(app);
 
-const users = [ // 用户数组
+let users = []; // 用户数组
 
-]
 
 app.listen(3001, () => {
     console.log('监听端口：3001');
 });
 
 io.on('connection', function (socket) {
+
+    let username = null; // 当前连接的用户名
+
     socket.on('login', function (data) {
         let isNew;
         let index = users.findIndex(item => item.username === data.username);
         isNew = index < 0 ? true : false;
 
         if (isNew) {
-            /*登录成功*/
+        /*登录成功*/
+            username = data.username;
             users.push(data);
             socket.emit('loginSuccess', data);
         } else {
@@ -33,12 +36,18 @@ io.on('connection', function (socket) {
         }
 
         // 向所有连接的客户广播add事件
-        socket.emit('add', data)
+        io.sockets.emit('add', data)
     })
 
 
     socket.on('message', function (data) {
         // 接收到消息后，将消息广播出去
-        socket.emit('receiveMessage', data)
+        io.sockets.emit('receiveMessage', data)
+    })
+
+    socket.on('disconnect', function () {
+        // 广播退出
+        io.sockets.emit('leave', username);
+        users = users.filter(item => item.username !== username);
     })
 })
